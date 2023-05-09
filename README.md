@@ -1,3 +1,4 @@
+Terraform module which creates networking resources on Hetzner Cloud.
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -47,7 +48,7 @@ No modules.
 | <a name="input_natgateway_private_ip"></a> [natgateway\_private\_ip](#input\_natgateway\_private\_ip) | private IP address of NatGateway, usually first IP address from public subnets | `string` | `"10.0.0.2"` | no |
 | <a name="input_natgateway_server_type"></a> [natgateway\_server\_type](#input\_natgateway\_server\_type) | NatGateway server type | `string` | `"cx11"` | no |
 | <a name="input_natgateway_ssh_key"></a> [natgateway\_ssh\_key](#input\_natgateway\_ssh\_key) | (Optional, list) SSH key IDs which should be injected into the server at creation time | `list(number)` | `[]` | no |
-| <a name="input_network_zone"></a> [network\_zone](#input\_network\_zone) | n/a | `string` | `"eu-central"` | no |
+| <a name="input_network_zone"></a> [network\_zone](#input\_network\_zone) | (Required, string) Name of network zone. Must be 'eu-central', 'us-east' or 'us-west' | `string` | `"eu-central"` | no |
 | <a name="input_private_subnets"></a> [private\_subnets](#input\_private\_subnets) | A list of public subnets inside the VPC | `list(string)` | `[]` | no |
 | <a name="input_public_subnet_suffix"></a> [public\_subnet\_suffix](#input\_public\_subnet\_suffix) | Suffix to append to public subnets name | `string` | `"public"` | no |
 | <a name="input_public_subnets"></a> [public\_subnets](#input\_public\_subnets) | A list of public subnets inside the VPC | `list(string)` | `[]` | no |
@@ -67,7 +68,7 @@ No modules.
 
 ## Copyright
 
-Copyright © 2017-2022 [Vucomir Ianculov](https://ianculov.ro)
+Copyright © 2023 [Vucomir Ianculov](https://ianculov.ro)
 
 
 

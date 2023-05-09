@@ -17,7 +17,7 @@ variable "cidr" {
 }
 
 variable "network_zone" {
-  description = ""
+  description = "(Required, string) Name of network zone. Must be 'eu-central', 'us-east' or 'us-west'"
   type        = string
   validation {
     condition     = contains(["eu-central", "us-east", "us-west"], var.network_zone)
