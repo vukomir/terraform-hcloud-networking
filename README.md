@@ -1,4 +1,20 @@
 Terraform module which creates networking resources on Hetzner Cloud.
+
+## Usage
+```hcl
+module "networking" {
+  source = "vukomir/networking/hcloud"
+
+  name             = "xyz-production"
+  cidr             = "10.0.0.0/16"
+  public_subnets   = ["10.0.0.0/24"]
+  private_subnets  = ["10.0.1.0/24"]
+  database_subnets = ["10.0.10.0/24"]
+
+  natgateway_create      = true
+  natgateway_enable_ipv6 = true
+}
+```
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
